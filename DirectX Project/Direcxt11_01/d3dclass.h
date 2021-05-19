@@ -3,7 +3,8 @@
 class D3DClass
 {
 public:
-	D3DClass(); D3DClass(const D3DClass&);
+	D3DClass();
+	D3DClass(const D3DClass&);
 	~D3DClass();
 
 	bool Initialize(int, int, bool, HWND, bool, float, float);
@@ -19,7 +20,7 @@ public:
 	void GetWorldMatrix(XMMATRIX&);
 	void GetOrthoMatrix(XMMATRIX&);
 
-	void GetVideoCardOmfp(char*, int&);
+	void GetVideoCardInfo(char*, int&);
 
 private:
 	bool m_vsync_enabled = false;
@@ -27,7 +28,7 @@ private:
 	char m_videoCardDescription[128] = { 0, };
 	IDXGISwapChain* m_swapChain = nullptr;
 	ID3D11Device* m_device = nullptr;
-	ID3D11DeviceContext* m_devicecontext = nullptr;
+	ID3D11DeviceContext* m_deviceContext = nullptr;
 	ID3D11RenderTargetView* m_renderTargetView = nullptr;
 	ID3D11Texture2D* m_depthStencilBuffer = nullptr;
 	ID3D11DepthStencilState* m_depthStencilState = nullptr;
