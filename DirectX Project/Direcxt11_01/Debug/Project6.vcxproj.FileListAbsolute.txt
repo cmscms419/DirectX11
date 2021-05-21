@@ -1,4 +1,0 @@
-C:\Users\alstj\source\repos\Project6\Debug\Project6.exe
-C:\Users\alstj\Desktop\Project6\Debug\Project6.exe
-C:\Users\alstj\Documents\GitHub\DirectX11\DirectX Project\Direcxt11_00\Debug\Project6.exe
-C:\Users\alstj\Documents\GitHub\DirectX11\DirectX Project\Direcxt11_01\Debug\Direcx11_01.exe
