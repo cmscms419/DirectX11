@@ -19,8 +19,8 @@ Colorsharderclass::~Colorsharderclass()
 bool Colorsharderclass::Initialize(ID3D11Device* device, HWND hwnd)
 {
 	// 정점 및 픽셀 쉐이더를 초기화합니다.
-	WCHAR vs[] = L"../Direcxt11Test/Colorvs.hlsl";
-	WCHAR ps[] = L"../Direcxt11Test/Colorps.hlsl";
+	WCHAR vs[] = L"../Direcxt11Test/Colorvs.vs";
+	WCHAR ps[] = L"../Direcxt11Test/Colorps.ps";
 
 	return InitializeShader(device, hwnd, vs, ps);
 }
