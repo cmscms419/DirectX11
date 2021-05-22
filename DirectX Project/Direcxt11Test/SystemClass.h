@@ -1,7 +1,5 @@
 #pragma once
 
-// https://copynull.tistory.com/238?category=649932
-
 class InputClass;
 class GraphicsClass;
 
@@ -25,9 +23,9 @@ private:
 	void ShutdownWindows();
 
 private:
-	LPCWSTR m_applocationName;
-	HINSTANCE m_hinstance;
-	HWND m_hwnd;
+	LPCWSTR m_applocationName = NULL;
+	HINSTANCE m_hinstance = NULL;
+	HWND m_hwnd = NULL;
 
 
 	//그래픽과 입력을 처리 할 두 객체

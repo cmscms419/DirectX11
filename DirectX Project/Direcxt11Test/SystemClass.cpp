@@ -112,7 +112,6 @@ bool SystemClass::Frame()
 	}
 
 	// 그래픽 객체의 Frame을 처리합니다
-
 	return m_Graphics->Frame();
 }
 
@@ -153,7 +152,7 @@ void SystemClass::InitializeWindows(int& screenWidth, int& screenHeight)
 	m_hinstance = GetModuleHandle(NULL);
 
 	// 프로그램 이름을 지정합니다.
-	m_applocationName = L"TestDX11Deno_01";
+	m_applocationName = L"TestDX11_01";
 
 	// windows 클래스를 아래와 같이 설정합니다.
 	WNDCLASSEX wc;
@@ -205,7 +204,7 @@ void SystemClass::InitializeWindows(int& screenWidth, int& screenHeight)
 
 		//윈도우 창을 가로, 세로의 정 가운데 오도록 합니다.
 		posX = (GetSystemMetrics(SM_CXSCREEN) - screenWidth) / 2;
-		posY = (GetSystemMetrics(SM_CXSCREEN) - screenHeight) / 2;
+		posY = (GetSystemMetrics(SM_CYSCREEN) - screenHeight) / 2;
 	}
 
 	// 윈도우를 생성하고 핸들을 구합니다.

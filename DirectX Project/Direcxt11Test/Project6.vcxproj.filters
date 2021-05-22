@@ -13,31 +13,43 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\SystemClass">
+      <UniqueIdentifier>{8e746164-9875-40cd-b8b8-a618b8443ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SystemClass\Input">
+      <UniqueIdentifier>{666d0098-8c68-45ac-a63e-d194d4c1875e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SystemClass\Graphics">
+      <UniqueIdentifier>{07b14cc8-3ddf-4ccb-a1bb-5427149f57a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SystemClass\Graphics\HLSL">
+      <UniqueIdentifier>{ab56140a-4890-4370-a9f5-859af2736dbf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GraphicsClass.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="InputClass.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SystemClass.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="WinMain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="D3DClass.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="SystemClass.cpp">
+      <Filter>소스 파일\SystemClass</Filter>
     </ClCompile>
-    <ClCompile Include="Colorshaderclass.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="InputClass.cpp">
+      <Filter>소스 파일\SystemClass\Input</Filter>
     </ClCompile>
-    <ClCompile Include="ModelClass.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="GraphicsClass.cpp">
+      <Filter>소스 파일\SystemClass\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Cameraclass.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\SystemClass\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Colorshaderclass.cpp">
+      <Filter>소스 파일\SystemClass\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DClass.cpp">
+      <Filter>소스 파일\SystemClass\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelClass.cpp">
+      <Filter>소스 파일\SystemClass\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -80,10 +92,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Colorps.ps">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\SystemClass\Graphics\HLSL</Filter>
     </None>
     <None Include="Colorvs.vs">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\SystemClass\Graphics\HLSL</Filter>
     </None>
   </ItemGroup>
 </Project>
