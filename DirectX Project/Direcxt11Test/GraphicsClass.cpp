@@ -23,7 +23,7 @@ GraphicsClass::~GraphicsClass()
 bool GraphicsClass::Initialize(int screenWidth, int screenHeight, HWND hwnd)
 {
 	//Direct3D 객체 생성
-	m_Direct3D = (D3DClass*)_aligned_malloc(sizeof(D3DClass), 16);
+	m_Direct3D = new D3DClass;
 	if (!m_Direct3D)
 	{
 		return false;
@@ -120,7 +120,7 @@ bool GraphicsClass::Frame()
 bool GraphicsClass::Render()
 {
 	//씬을 그리기 위해 버퍼를 지웁니다.
-	m_Direct3D->BeginScene(0.5f, 0.5f, 0.0f, 1.0f);
+	m_Direct3D->BeginScene(0.0f, 0.0f, 0.0f, 1.0f);
 
 	//카메라의 위치에 따라 뷰 행렬을 생성합니다.
 	m_Camera->Render();

@@ -42,10 +42,10 @@ int ModelClass::GetIndexCount()
 bool ModelClass::InitializeBuffers(ID3D11Device* device)
 {
 	//정점 배열의 정점 수를 설정합니다
-	m_vertexCount = 3;
+	m_vertexCount = 4;
 
 	//인덱스 배열의 인덱스 수를 설정합니다.
-	m_indexCount = 3;
+	m_indexCount = 4;
 
 	// 정점 배열을 만듭니다.
 	VertexType* vertices = new VertexType[m_vertexCount];
@@ -62,19 +62,24 @@ bool ModelClass::InitializeBuffers(ID3D11Device* device)
 	}
 
 	// 정점 배열에 데이터를 설정합니다.
-	vertices[0].position = XMFLOAT3(-1.0f, -1.0f, 0.0f); // Bottom left
-	vertices[0].color = XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f);
+	vertices[0].position = XMFLOAT3(-1.0f, -1.0f, 0.0f);  // Bottom left.
+	vertices[0].color = XMFLOAT4(0.0f, 0.0f, 1.0f, 1.0f);
 
-	vertices[1].position = XMFLOAT3(0.0f,1.0f,0.0f); // Top middle
+	vertices[1].position = XMFLOAT3(-1.0f, 1.0f, 0.0f);  // Top Left
 	vertices[1].color = XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f);
 
-	vertices[2].position = XMFLOAT3(1.0f, -1.0f, 0.0f); // Bottom right
-	vertices[2].color = XMFLOAT4(0.0f, 1.0f, 0.0f, 1.0f);
+	vertices[2].position = XMFLOAT3(1.0f, -1.0f, 0.0f);  // Bottom right.
+	vertices[2].color = XMFLOAT4(1.0f, 0.0f, 0.0f, 1.0f);
+
+	vertices[3].position = XMFLOAT3(1.0f, 1.0f, 0.0f);	// Top right
+	vertices[3].color = XMFLOAT4(1.0f, 0.0f, 1.0f, 1.0f);
 
 	// 인덱스 배열의 값을 설정합니다.
-	indices[0] = 0; // Bottom left
-	indices[1] = 1;	// Top middle
-	indices[2] = 2; // Bottom right
+	indices[0] = 0;  // Bottom left.
+	indices[1] = 1;  // Top Left
+	indices[2] = 2;  // Bottom right.
+	indices[3] = 3;  // Top right
+
 
 	// 정적 정점 버퍼의 구조체를 설정합니다.
 	D3D11_BUFFER_DESC vertexBufferDesc;
@@ -158,5 +163,5 @@ void ModelClass::RenderBuffers(ID3D11DeviceContext* deviceContext)
 	deviceContext->IASetIndexBuffer(m_indexBuffer, DXGI_FORMAT_R32_UINT, 0);
 
 	// 정점 버퍼로 그릴 기본형을 설정합니다. 여기서는 삼각형으로 설정합니다.
-	deviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
+	deviceContext->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP);
 }

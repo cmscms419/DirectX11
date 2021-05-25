@@ -25,6 +25,15 @@
     <Filter Include="소스 파일\SystemClass\Graphics\HLSL">
       <UniqueIdentifier>{ab56140a-4890-4370-a9f5-859af2736dbf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\SystemClass\Graphics\Camera">
+      <UniqueIdentifier>{e49d42d3-3be5-421a-8f36-b964abe31546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SystemClass\Graphics\Model">
+      <UniqueIdentifier>{24484912-4cdb-47ee-977c-f25f677fb2d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SystemClass\Graphics\Color">
+      <UniqueIdentifier>{d0089f5e-006b-454e-8e8c-ada54a945edf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WinMain.cpp">
@@ -39,17 +48,17 @@
     <ClCompile Include="GraphicsClass.cpp">
       <Filter>소스 파일\SystemClass\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Cameraclass.cpp">
-      <Filter>소스 파일\SystemClass\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Colorshaderclass.cpp">
-      <Filter>소스 파일\SystemClass\Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="D3DClass.cpp">
       <Filter>소스 파일\SystemClass\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Cameraclass.cpp">
+      <Filter>소스 파일\SystemClass\Graphics\Camera</Filter>
+    </ClCompile>
     <ClCompile Include="ModelClass.cpp">
-      <Filter>소스 파일\SystemClass\Graphics</Filter>
+      <Filter>소스 파일\SystemClass\Graphics\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Colorshaderclass.cpp">
+      <Filter>소스 파일\SystemClass\Graphics\Color</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -91,10 +100,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Colorps.ps">
+    <None Include="Colorvs.vs">
       <Filter>소스 파일\SystemClass\Graphics\HLSL</Filter>
     </None>
-    <None Include="Colorvs.vs">
+    <None Include="Colorps.ps">
       <Filter>소스 파일\SystemClass\Graphics\HLSL</Filter>
     </None>
   </ItemGroup>

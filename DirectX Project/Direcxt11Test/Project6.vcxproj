@@ -164,8 +164,12 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Colorps.ps" />
-    <None Include="Colorvs.vs" />
+    <None Include="Colorps.ps">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="Colorvs.vs">
+      <FileType>Document</FileType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
